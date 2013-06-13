@@ -42,6 +42,20 @@
             navigator.notification.vibrate(2000);
         }
 
+        function addContact() {
+            var contact = navigator.contacts.create({"displayName": "Test User"});
+            contact.displayName = "Italy Pizza";
+            contact.nickname = "Italy Pizza";       //specify both to support all devices
+            var name = new ContactName();
+            name.givenName = "Italy";
+            name.familyName = "Pizza";
+            contact.name = name;
+
+            // save
+            contact.save(onSaveSuccess,onSaveError);
+
+        }
+
     </script>
 
     <!--<a href="#" onclick="showAlert(); return false;">Show Alert</a>
@@ -265,7 +279,8 @@
             tel:  (555) 555-5555<br/>
 
             email:  italypizza@pizzaplace.com<br/>
-            Call of Visit us today!<br/>
+            Call of Visit us today!<br/><br/>
+            Add to contacts
         </p>
     </div>
 
