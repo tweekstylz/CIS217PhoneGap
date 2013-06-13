@@ -17,16 +17,7 @@
         // Cordova is ready
         //
         function onDeviceReady() {
-            var contact = navigator.contacts.create({"displayName": "Test User"});
-            contact.displayName = "Italy Pizza";
-            contact.nickname = "Italy Pizza";       //specify both to support all devices
-            var name = new ContactName();
-            name.givenName = "Italy";
-            name.familyName = "Pizza";
-            contact.name = name;
-
-            // save
-            contact.save(onSaveSuccess,onSaveError);
+            //no code yet
         }
 
         // Show a custom alert
@@ -49,35 +40,6 @@
         //
         function vibrate() {
             navigator.notification.vibrate(2000);
-        }
-
-        function addContact() {
-
-
-        }
-
-        // onSaveSuccess: Get a snapshot of the current contacts
-        //
-        function onSaveSuccess(contact) {
-            alert("Save Success");
-        }
-
-        // onSaveError: Failed to get the contacts
-        //
-        function onSaveError(contactError) {
-            alert("Error = " + contactError.code);
-        }
-
-        // onRemoveSuccess: Get a snapshot of the current contacts
-        //
-        function onRemoveSuccess(contacts) {
-            alert("Removal Success");
-        }
-
-        // onRemoveError: Failed to get the contacts
-        //
-        function onRemoveError(contactError) {
-            alert("Error = " + contactError.code);
         }
 
     </script>
@@ -304,7 +266,7 @@
 
             email:  italypizza@pizzaplace.com<br/>
             Call of Visit us today!<br/><br/>
-            Add to contacts
+
         </p>
     </div>
 
