@@ -24,9 +24,9 @@
         //
         function showAlert() {
             navigator.notification.alert(
-                    'You are the winner!',  // message
-                    'Game Over',            // title
-                    'Done'                  // buttonName
+                    'You added a pizza to your cart!',  // message
+                    'Pizza',            // title
+                    'Continue'                  // buttonName
             );
         }
 
@@ -336,7 +336,7 @@
         // Add a buy button to each of my products
 
         $('div[data-product]').each( function(){
-            $(this).append('<button class="btnCart">Add To Cart</button>');
+            $(this).append('<button onclick="showAlert(); return false;" class="btnCart">Add 1 To Cart</button>');
         })
 
         $('.btnCart').on("click", function(event){
